@@ -1,0 +1,104 @@
+body {
+  background-color: black;
+  font-family: terminus, monospace;
+}
+
+::selection{
+  background-color: white;
+  color: black;
+}
+
+.spaced{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.special{
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+.whiteText{
+  color: white;
+}
+
+.blackText{
+  color: black;
+}
+
+.magentaText{
+  color: magenta;
+  padding-left: 15px;
+}
+
+.hlpMessage{
+  color: black;
+  margin-top: 10px;
+}
+
+.reddishText{
+  margin-top: 10px;
+  color:#E15D44;
+}
+
+
+p{
+  margin: 0px;
+  padding-left: 15px;
+  color: white;
+}
+
+.half{
+  display: inline-block;
+  padding-left: 15px;
+  color: white;
+  /*float:left;*/
+  width: 50%;
+}
+
+a{
+  color: #04d9ff;
+  text-shadow: 0 0 1px lightskyblue;
+  text-decoration:none;
+}
+
+a:hover{
+  /* background-color: lightgreen; */
+  background-color: #04d9ff;
+  color:black;
+}
+
+.aquaText{
+  color:aqua;
+  padding-left: 15px;
+}
+
+.tangerineText{
+  color:#EFC050;
+  padding-left: 15px;
+}
+
+
+.greenText{
+  color: lime;
+}
+
+.blueText{
+  color:blue;
+}
+
+.greyText{
+  color: grey;
+  font-style: italic;
+}
+
+.inputText{
+  color: white;
+  background-color: black;
+  border: none;
+  font-family: monospace;
+  user-select: none;
+  outline: none;
+  overflow: visible;
+  width: 50%;
+}
