@@ -6,7 +6,7 @@
  * @author Patrick McCarty <patricksantos1234567@gmail.com>
  *
  * Created at     : 2022-11-19 12:21:56 
- * Last modified  : 2022-12-03 09:38:00
+ * Last modified  : 2022-12-30 12:44:00
  */
 
 
@@ -150,19 +150,23 @@ function printUser(){
 
   if(x == "clear"){
     clear();
-  } else if(x == "help"){
+  } else if(x.toLowerCase() == "help"){
     help();
-  } else if(x == ""){
+  } else if(x.toLowerCase() == ""){
     // do nothing
-  } else if(x == "logo"){
+  } else if(x.toLowerCase() == "logo"){
     logo(false);
-  } else if(x == "aboutme"){
+  } else if(x.toLowerCase() == "aboutme"){
     aboutme();
-  } else if(x == "email"){
+  } else if(x.toLowerCase() == "email"){
     email();
-  } else if(x == "projects"){
+  } else if(x.toLowerCase() == "projects"){
     projects();
-  } else{
+  } else if(x.toLowerCase() == "resume"){
+	resume();
+  }else if(x.toLowerCase() == "history"){
+	history();
+  }else{
     invalid();
   }
 
@@ -193,6 +197,8 @@ function help(){
   commands[3] = 'projects' + '\xa0\xa0\xa0\xa0' + 'display projects';
   commands[4] = 'email' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + 'display email';
   commands[5] = 'logo' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + 'display logo';
+  commands[6] = 'resume' + '\xa0\xa0\xa0\xa0\xa0\xa0' + 'display resume in a new tab';
+  commands[7] = 'history' + '\xa0\xa0\xa0\xa0\xa0' + 'display previously inputed commands';
 
   for(let i = 0; i < commands.length; i++){
     let buf = document.createElement("p");
@@ -400,6 +406,25 @@ function projects(){
   link.target = "_blank";
   store.appendChild(link);
   document.getElementById("invisible_div").appendChild(store);
+}
+
+/**
+ * opens resume in a new tab
+ */
+function resume(){
+	window.open('resume.pdf');
+}
+
+/**
+ * Display history
+ */
+function history(){
+  for(let i = 0; i < hist.length; i++){
+    let buf = document.createElement("p");
+    buf.textContent = hist[i];
+    buf.className = "whiteText";
+    document.getElementById("invisible_div").appendChild(buf);
+  }
 }
 
 
